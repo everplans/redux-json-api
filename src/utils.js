@@ -1,7 +1,7 @@
 import axios from 'axios';
 import imm from 'object-path-immutable';
 
-const AxiosError = require('axios/lib/core/AxiosError');
+const AxiosError = require('axios/unsafe/core/AxiosError');
 
 export const jsonContentTypes = [
   'application/json',
