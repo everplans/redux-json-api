@@ -1,5 +1,5 @@
 import axios from 'axios';
-import createError from 'axios/lib/core/createError';
+import createError from 'axios/lib/core/AxiosError';
 import imm from 'object-path-immutable';
 
 export const jsonContentTypes = [
@@ -29,8 +29,8 @@ export const apiRequest = (url, options = {}) => {
       if (hasValidContentType(res) === false) {
         throw createError(
           'Invalid Content-Type in response',
-          res.config,
           null,
+          res.config,
           res
         );
       }
